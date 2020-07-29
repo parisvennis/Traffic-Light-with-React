@@ -15,17 +15,22 @@
     background: black;
     border-radius: 150px;
     margin: 1px;
+    border: 5px solid pink;
 }
 
-.light {
+.lights {
     background: black;
     height: 400px;
     width: 200px;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
 }
 .r-light {
     border-radius: 50%;
-    background: red;
-    margin: 1px;
+    background: gray;
+    margin: auto;
     height: 120px;
     width: 120px;
 }
@@ -34,8 +39,8 @@
 }
 .y-light {
     border-radius: 50%;
-    background: yellow;
-    margin: 1px;
+    background: gray;
+    margin: auto;
     height: 120px;
     width: 120px;
 }
@@ -44,11 +49,14 @@
 }
 .g-light {
     border-radius: 50%;
-    background: green;
-    margin: 1px;
+    background: gray;
+    margin: auto;
     height: 120px;
     width: 120px;
 }
 .g-light.active {
     background: green;
+}
+.bar {
+    background-color: black;
 }

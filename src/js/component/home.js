@@ -1,36 +1,39 @@
-import React from "react";
+import React, { Component } from "react";
 
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
 
-//create your first component
-export function Home() {
-	var color = "";
-	var redOn = "";
-	if (color == "red") redOn = "active";
-	var yellowOn = "";
-	if (color == "yellow") yellowOn = "active";
-	var greenOn = "";
-	if (color == "green") greenOn = "active";
+export class Home extends Component {
+	constructor() {
+		super();
+		this.state = {
+			color: ""
+		};
+	}
 
-	return (
-		<>
-			<div className="bar">bar</div>
-			<div className="light text-center mt-5">
-				<div onClick={() => } className={"r-light" + redOn}>
-					red light
-				</div>
+	render() {
+		let light1on = "";
+		let light2on = "";
+		let light3on = "";
+		if (this.state.color === "red") light1on = "active";
+		if (this.state.color === "yellow") light2on = "active";
+		if (this.state.color === "green") light3on = "active";
+
+		return (
+			<div className="lights">
 				<div
-					onClick={() => }
-					className={"y-light" + yellowOn}>
-					yellow light
-				</div>
+					onClick={() => this.setState({ color: "red" })}
+					className={"r-light " + light1on}
+				/>
 				<div
-					onClick={() => }
-					className={"g-light" + greenOn}>
-					green light
-				</div>
+					onClick={() => this.setState({ color: "yellow" })}
+					className={"y-light " + light2on}
+				/>
+				<div
+					onClick={() => this.setState({ color: "green" })}
+					className={"g-light " + light3on}
+				/>
 			</div>
-		</>
-	);
+		);
+	}
 }
