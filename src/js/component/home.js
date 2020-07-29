@@ -20,19 +20,22 @@ export class Home extends Component {
 		if (this.state.color === "green") light3on = "active";
 
 		return (
-			<div className="lights">
-				<div
-					onClick={() => this.setState({ color: "red" })}
-					className={"r-light " + light1on}
-				/>
-				<div
-					onClick={() => this.setState({ color: "yellow" })}
-					className={"y-light " + light2on}
-				/>
-				<div
-					onClick={() => this.setState({ color: "green" })}
-					className={"g-light " + light3on}
-				/>
+			<div>
+				<div className="bar" />
+				<div className="lights">
+					<div
+						onClick={() => this.setState({ color: "red" })}
+						className={"r-light " + light1on}
+					/>
+					<div
+						onClick={() => this.setState({ color: "yellow" })}
+						className={"y-light " + light2on}
+					/>
+					<div
+						onClick={() => this.setState({ color: "green" })}
+						className={"g-light " + light3on}
+					/>
+				</div>
 			</div>
 		);
 	}
